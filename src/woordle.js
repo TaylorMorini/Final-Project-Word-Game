@@ -11,18 +11,18 @@
     export class woordle extends LitElement {
       // a convention I enjoy so you can change the tag name in 1 place
       static get properties() {
+     
       return{
         endpoint: {type: String},
-        wordLength: {type: Number, reflect:true },
     
       }
     }
         constructor() {
           super();
-          this.wordLength = '5';
           this.endpoint ='/api/wordGenerate';
-          this.word = '';
+          this.word = [];
         }
+       
     
       updated(changedProperties) {
         
@@ -77,6 +77,7 @@
             return data;
           });
       }
+     
   
       static get styles() {
         return [
@@ -101,18 +102,21 @@
           `,
         ];
       }
+      
     
       render() {
-        return html` <ul>
-          <li><strong class="word">Word Length:  </strong> ${this.wordLength}</li>
-          <li><strong class="word">Word :  </strong> ${this.word}</li>
+        // this function runs every time a properties() declared variable changes
+        // this means you can make new variables and then bind them this way if you like
+    
+        const url = `https://random-word-api.herokuapp.com/all`;
+        // var wordList = await fetch(url).then(res => res.json());
+        // filter array to just 5 letter words
+        //wordList = wordList.filter(item => item.length === 5);
 
-       
     
-          <li></li>
-        </ul>`;
-      }
-    }
     
+        return html  `<iframe title="Word" src = ${url}></iframe> `;
+      }}
+      
     customElements.define('woord-le', woordle);
     

@@ -18,7 +18,7 @@
       font-family: sans-serif;
       background-color: #ededed;
     }
-    x-weather {
+    woord-le {
       border: 1px solid black;
     }
   </style>
@@ -26,21 +26,28 @@
 </head>
 
 <body>
-  <button id="button">Generate</button>
+  <button id="button" onclick= "myFunction()">Generate</button>
+
     <br>
 <script type="module">
-  import "./src/woordle.js";
+   
+   //importing woord element
+  import {woordle} from "./src/woordle.js";
+  //making instance of class
+ // const getWordClass = new woord();
+ 
 
-  document.querySelector('#button').addEventListener('click', (e) => {
-    document.querySelector('woord-le').updateTerm(document.querySelector('#word').value);
-    //document.querySelector('nasa-image-search').updateTerm(document.querySelector('#term').value)
+  //document.querySelector('#button').addEventListener('click', (e) => {
+   //document.querySelector('woord-le').updateTerm(document.querySelector('#word').value);
+
     
 
-  });
 
+  
 
 </script>
-<woordle</woordle>
+<h1>Getting a Word (example)</h1>
+<woord-le> </woord-le>
 
 
 </body>
