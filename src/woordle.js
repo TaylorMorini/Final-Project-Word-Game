@@ -40,7 +40,16 @@
         //word = wordList.filter(item => item.length === 5);
        
     //return html`word:${this.word} `;
-       return html  `<iframe> word:${this.word} </iframe> `;
+       //return html  `<iframe> word:${this.word} </iframe> `;
+
+       const url = `https://random-word-api.herokuapp.com/all`;
+        // var wordList = await fetch(url).then(res => res.json());
+        // filter array to just 5 letter words
+        //wordList = wordList.filter(item => item.length === 5);
+
+    
+    
+        return html  `<iframe title="Word" src = ${url}></iframe> `;
       }}
       
       
