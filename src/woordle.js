@@ -34,11 +34,8 @@
 
         }
       render() {
-        // this function runs every time a properties() declared variable changes
-        // this means you can make new variables and then bind them this way if you like
-    
-       
-       // word = await fetch(url).then(res => res.json());
+        
+      // word = await fetch(url).then(res => res.json());
         // filter array to just 5 letter words
         //word = wordList.filter(item => item.length === 5);
        
