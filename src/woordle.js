@@ -18,31 +18,6 @@
           this.word = null;
         }
        
-       updated(changedProperties)
-       {
-        changedProperties.forEach((oldValue, propName) => {
-      
-          if (propName === 'word' && this[propName]) {
-            
-            const evt = new CustomEvent('word-changed', {
-            
-              bubbles: true,
-             
-              composed: true,
-         
-              cancelable: true,
-            
-              detail: {
-                value: this.word,
-              },
-            });
-            
-            this.dispatchEvent(evt);
-          }
-        });
-    
-       }
-  
         firstUpdated(changedProperties) {
        
           if (super.firstUpdated) {
